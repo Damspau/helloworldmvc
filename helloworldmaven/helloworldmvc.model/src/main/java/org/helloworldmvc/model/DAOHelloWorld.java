@@ -14,7 +14,8 @@ public class DAOHelloWorld implements IModel {
 	private DAOHelloWorld instance = null;
 	private String helloWorldMessage = null;
 	
-	private DAOHelloWorld () {
+	DAOHelloWorld () {
+		
 		
 	}
 	
@@ -29,9 +30,7 @@ public class DAOHelloWorld implements IModel {
 	}
 
 
-	public String getHelloWorldMessage() {
-		return helloWorldMessage;
-	}
+
 
 
 	public void setHelloWorldMessage(String helloWorldMessage) {
@@ -45,6 +44,12 @@ public class DAOHelloWorld implements IModel {
 	return helloWorldMessage;
 	
 }
+
+	
+	public String getHelloWorldMessage() throws FileNotFoundException {
+		
+		return readFile();
+	}
 
 
 	public String getHelloWorld() {
